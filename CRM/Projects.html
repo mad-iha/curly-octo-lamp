@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CRM System</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      flex: 1;
+      padding-bottom: 40px; 
+    }
+    footer {
+      text-align: center;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #333;
+      padding: 10px 0;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <h1>CRM System</h1>
+    </div>
+    <nav class="container">
+      <ul>
+        <li><a href="index.html" title="Return to the dashboard">Home</a></li>
+        <li><a href="#">Leads</a></li>
+        <li><a href="Staff.html" title="View staff database and perform add and edit actions">Staff</a></li>
+        <li class="active"><a href="Projects.html" title="View current project statuses and rearrange priorities.">Projects</a></li>
+        <li><a href="#">Interactions</a></li>
+      </ul>
+      <div>
+        <label class="switch">
+          <input type="checkbox" checked onclick="myFunction()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div id="accordion">
+      <h3>Project 1</h3>
+      <div>
+        <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+      </div>
+      <h3>Project 2</h3>
+      <div>
+        <p>In publishing and graphic design, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+      </div>
+      <h3>Project 3</h3>
+      <div>
+        <p>In publishing and graphic design, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+      </div>
+      <h3>Project 4</h3>
+      <div>
+        <p>In publishing and graphic design, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+      </div>
+      <h3>Project 5</h3>
+      <div>
+        <p>In publishing and graphic design, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(function() {
+      $("#accordion").accordion({
+        collapsible: true,
+        active: false,
+        heightStyle: "content",
+        animate: 200,
+        sortable: true
+      });
+
+      $('a[title]').tooltip();
+    });
+  </script>
+  <footer>
+    <p>&copy; 2023 CRM System. All rights reserved.</p>
+  </footer>
+</body>
+</html>

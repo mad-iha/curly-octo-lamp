@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CRM System</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <h1>CRM System</h1>
+    </div>
+    <nav class="container">
+      <ul>
+        <li class="active"><a href="#" id="home-link" title="Return to the dashboard">Home</a></li>
+        <li><a href="#">Leads</a></li>
+        <li><a href="Staff.html" title="View staff database and perform add and edit actions">Staff</a></li>
+        <li><a href="Projects.html" title="View current project statuses and rearrange priorities">Projects</a></li>
+        <li><a href="#">Interactions</a></li>
+      </ul>  
+      <div>
+        <label class="switch">
+          <input type="checkbox" checked onclick="myFunction()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <div class="image-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="image11.jpg" alt="Image 1" style="width: 600px; height: 450px;">
+          </div>
+          <div class="flip-card-back">
+            <h3>Image 1 Description</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.</p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="image7.jpg" alt="Image 2" style="width: 600px; height: 450px;">
+          </div>
+          <div class="flip-card-back">
+            <h3>Image 2 Description</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.</p>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="image2.jpg" alt="Image 2" style="width: 600px; height: 450px;">
+          </div>
+          <div class="flip-card-back">
+            <h3>Image 3 Description</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="image8.jpg" alt="Image 2" style="width: 600px; height: 450px;">
+          </div>
+          <div class="flip-card-back">
+            <h3>Image 4 Description</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 CRM System. All rights reserved.</p>
+  </footer>
+
+  
+  <div id="login-dialog" title="Login">
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username">
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password">
+    </form>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#login-dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        width: 400,
+        buttons: {
+          Close: function() {
+            $(this).dialog("close");
+          },
+          Login: function() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+  
+            if (username === 'admin' || password === 'password') {
+              alert("Login successful!");
+              $(this).dialog("close");
+        } else {
+          alert("Invalid username or password.");
+            }
+          } 
+        }
+      });
+  
+      $("#home-link").on("click", function(e) {
+        e.preventDefault();
+        $("#login-dialog").dialog("open");
+      });
+    });
+  </script>
+</body>
+</html>

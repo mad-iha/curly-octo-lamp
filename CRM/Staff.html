@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CRM System</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      flex: 1;
+    }
+    footer {
+      text-align: center;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #333;
+      padding: 10px 0;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <h1>CRM System</h1>
+    </div>
+  </header>
+  <nav class="container">
+    <ul>
+      <li><a href="index.html" title="Return to the dashboard.">Home</a></li>
+      <li><a href="#" title="View leads.">Leads</a></li>
+      <li class="active"><a href="Staff.html" title="View staff database and perform add and edit actions.">Staff</a></li>
+      <li><a href="Projects.html" title="View current project statuses and rearrange priorities.">Projects</a></li>
+      <li><a href="#" title="View interactions.">Interactions</a></li>
+    </ul>
+    <div>
+      <label class="switch">
+        <input type="checkbox" checked onclick="myFunction()">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <div class="accordion" id="accordion">
+    <h3>Full-time Staff</h3>
+    <div>
+      <table class="staff-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>johndoe@gmail.com</td>
+            <td>1234567890</td>
+          </tr>
+          <tr>
+            <td>Emma</td>
+            <td>Smith</td>
+            <td>emmasmith@gmail.com</td>
+            <td>5675675678</td>
+          </tr>
+          <tr>
+            <td>William</td>
+            <td>Davis</td>
+            <td>williamdavis@gmail.com</td>
+            <td>7897897890</td>
+          </tr>
+          <tr>
+            <td>Michael</td>
+            <td>Smith</td>
+            <td>michaelsmith@gmail.com</td>
+            <td>1112223333</td>
+          </tr>
+          <tr>
+            <td>Jane</td>
+            <td>Smith</td>
+            <td>janesmith@gmail.com</td>
+            <td>9876543210</td>
+          </tr>
+          <tr>
+            <td>William</td>
+            <td>Davis</td>
+            <td>williamdavis@gmail.com</td>
+            <td>7897897890</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Part-time Staff</h3>
+    <div>
+      <table class="staff-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Michael</td>
+            <td>Smith</td>
+            <td>michaelsmith@gmail.com</td>
+            <td>1112223333</td>
+          </tr>
+          <tr>
+            <td>William</td>
+            <td>Davis</td>
+            <td>williamdavis@gmail.com</td>
+            <td>7897897890</td>
+          </tr>
+          <tr>
+            <td>Emma</td>
+            <td>Smith</td>
+            <td>emmasmith@gmail.com</td>
+            <td>5675675678</td>
+          </tr>
+          <tr>
+            <td>William</td>
+            <td>Davis</td>
+            <td>williamdavis@gmail.com</td>
+            <td>7897897890</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Casual Staff</h3>
+    <div>
+      <table class="staff-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Adam</td>
+            <td>Johnson</td>
+            <td>adamjohnson@gmail.com</td>
+            <td>1231231234</td>
+          </tr>
+          <tr>
+            <td>William</td>
+            <td>Davis</td>
+            <td>williamdavis@gmail.com</td>
+            <td>7897897890</td>
+          </tr>
+          <tr>
+            <td>Emma</td>
+            <td>Smith</td>
+            <td>emmasmith@gmail.com</td>
+            <td>5675675678</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Contractors</h3>
+    <div>
+      <table class="staff-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Olivia</td>
+            <td>Miller</td>
+            <td>oliviamiller@gmail.com</td>
+            <td>3453453456</td>
+          </tr>
+          <tr>
+            <td>William</td>
+            <td>Davis</td>
+            <td>williamdavis@gmail.com</td>
+            <td>7897897890</td>
+          </tr>
+          <tr>
+            <td>Adam</td>
+            <td>Johnson</td>
+            <td>adamjohnson@gmail.com</td>
+            <td>1231231234</td>
+          </tr>
+          <tr>
+            <td>William</td>
+            <td>Davis</td>
+            <td>williamdavis@gmail.com</td>
+            <td>7897897890</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    $(function() {
+      $("#accordion").accordion({
+        collapsible: true,
+        heightStyle: "content",
+        active: false
+      });
+
+      
+      $(".staff-table tbody").sortable({
+        handle: "td",
+        axis: "y",
+        containment: "parent"
+      });
+
+      $('a[title]').tooltip();
+    });
+  
+  </script>
+  <footer>
+    <p>&copy; 2023 CRM System. All rights reserved.</p>
+  </footer>
+</body>
+</html>

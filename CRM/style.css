@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header-title {
+    background-color: #333;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    
+  }
+  
+  
+
+  .header-title h1{
+      text-align: center;
+      color: white;
+      background-color: #333;
+      padding: 10px;
+      margin: 35%;
+      line-height: 40px;
+      
+}
+    
+
+  
+    
+    nav {
+    background-color: #eee;
+    padding: 10px;
+    font-size: larger;
+    font-weight: 300;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+  }
+  
+  section.banner {
+    background-color: transparent;
+    padding: 20px;
+  }
+  
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    column-gap: 80px;
+    background-color: transparent;
+ }
+ .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+.slider.round {
+  border-radius: 34px;
+}
+.slider{
+    border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.container {
+    display: flex;
+}
+    .container ul {
+        width: 95%;
+    }
+    .container div {
+        width: 5%;
+    }
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+      
+      }
+    .checkbox{
+        position: absolute;
+    }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 550px;
+    height: 400px;
+    perspective: 1000px; 
+    display: inline-block;
+    margin: 50px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 550px;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 550px;
+    height: 400px;
+    backface-visibility: hidden;
+    
+  }
+  
+  .flip-card-front {
+    background-color: #f1f1f1;
+  }
+  
+  .flip-card-back {
+    background-color: #b3d9ff;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+  }
+  
+  .image-container img {
+    width: 350px;
+    height: 500px;
+  }
+
+  .content{
+    flex: 1;
+    padding-bottom: 40px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    
+  }
+
+  @media only screen and (max-width: 480px) {
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+  }
+
+
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 5px;
+    border-bottom: 1px solid #333;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    width: 80px;
+  }
+  
+  form input[type="text"], form input[type="email"], form input[type="tel"] {
+    width: 50%;
+    height: 60px;
+    
+  }
+
+  
+  .ui-dialog-titlebar {
+    background: #f1f1f1;
+    border: none;
+  }
+  .ui-dialog-titlebar-close {
+    outline: none;
+    font-size: 14px;
+  }
+  .ui-dialog .ui-dialog-buttonpane {
+    background: #f1f1f1;
+    border: none;
+  }
+  .ui-dialog .ui-dialog-buttonset button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  .ui-dialog .ui-dialog-buttonset button:hover {
+    background-color: #45a049;
+  }
+
+  #tabs {
+    margin-top: 20px;
+  }
+  
+
+  
+  #tabs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #tabs ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  #tabs ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  #tabs ul li.active a {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  #tabs div {
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 4px 4px 4px;
+  }
+  
+  
+  .staff-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .staff-table th,
+  .staff-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .staff-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .staff-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+  .accordion h3 {
+    cursor: pointer;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ddd;
+  }
+  .accordion .ui-accordion-content {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+  }
+  
+  .ui-accordion .ui-accordion-header {
+    color: black;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 2px 0 0 0;
+    padding: 0.5em 0.5em 0.5em 0.7em;
+    font-size: 100%;
+}
+  
